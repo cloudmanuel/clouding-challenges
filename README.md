@@ -36,7 +36,8 @@ Close example minus the TF organization steps (https://developer.hashicorp.com/t
 
 You will need to either paste credentials into your terminal, configure credentials in aws config file, or in a terraform provider block.
 
-``` provider “aws” {
+``` 
+provider “aws” {
   region = “us-east-1”
   access_key = “A****************”
   secret_key =   “U**************”
@@ -47,6 +48,7 @@ When running things locally, again make sure to not upload the files with creden
 
 Optionally, if you want to use s3 remote file for this even when running locally, you would uncomment the s3 line in the main.tf like in the example above. Example:
 
+```
 terraform {
     backend "s3" {
     bucket = "mybucket"
@@ -61,6 +63,7 @@ terraform {
     }
   }
 }
+```
 
 1) Change directory to the challenge you are working on.
 
