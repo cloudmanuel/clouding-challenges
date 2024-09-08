@@ -12,7 +12,7 @@ If that doesnt help, then you can use google and other resources. Yes, I underst
 
 ## Getting Started
 
-There are multiple ways of creating the resources if you want to do so. In this repo, there is a github workflow and a terraform.yml file. 
+There are multiple ways of creating the resources if you want to do so. In this repo, there is a github workflow and a setup.yml file. 
 
 ### Steps to use github actions to deploy resources:
 
@@ -20,9 +20,9 @@ There are multiple ways of creating the resources if you want to do so. In this 
 
 2) Create an AWS IAM user with proper permissions needed to create the resources in each challenge, then grab that users credentials and add them as github secrets for AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.
 
-3) Modify the terraform.yml and the work directory to match the challenge you want the github actions to deploy.
+3) Modify the setup.yml and the work directory to match the challenge you want the github actions to deploy.
 
-4) Modify the terraform init line in terraform.yml.
+4) Modify the terraform init line in setup.yml.
 
 5) Modify the main.tf file in the directory and uncomment the backend line in the terraform block.
 
