@@ -33,4 +33,3 @@ The solution to confirm that the security groups(SG) are correctly configured. Y
 Additionally, in the doc mentioned above it states which port to use and the [mysql documents] (https://dev.mysql.com/doc/refman/8.4/en/mysql-command-options.html#option_mysql_port) will also show the port used by default if not mentioned. 
 
 Typically, it is good practice to use the -P option during the mysql connection but I left it off on purpose. This is something you will just begin to learn and understand more as time passes and you gain experience with databases. You will understand which port is used for which engine by default, the configuration to ports needed if you dont want to use the default, and typical things to check first. 
-

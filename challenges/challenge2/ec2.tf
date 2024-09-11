@@ -1,6 +1,6 @@
 # EC2 Instance
 resource "aws_instance" "web" {
-  ami           = "ami-0a91cd140a1fc148a" # Amazon Linux 2 AMI (Free Tier eligible)
+  ami           = "ami-0a91cd140a1fc148a" # Amazon Linux 2 AMI (Free Tier eligible), region specific
   instance_type = "t3.micro"
   subnet_id     = aws_subnet.main.id
   security_groups = [aws_security_group.ec2_sg.name]
