@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
         run:
-            working-directory: ./challenges/challenge5
+            # working-directory: ./challenges/challenge4
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -34,7 +34,7 @@ jobs:
         aws-region: us-east-1
 
     - name: Terraform Init
-      run: terraform init -backend-config="bucket=cloudingmanuel-tf" -backend-config="key=challenge5.tfstate"
+      run: terraform init
       # replace above file with terraform init -backend-config="bucket=exammple-bucket" -backend-config="key=examplefile.tfstate"
       # replace bucket and file with your info
 
