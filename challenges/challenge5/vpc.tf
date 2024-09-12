@@ -22,7 +22,7 @@ resource "aws_internet_gateway" "main_igw" {
 resource "aws_subnet" "main_subnet" {
   vpc_id            = aws_vpc.main_vpc.id
   cidr_block        = "10.0.1.0/24"
-  availability_zone = "us-west-2a"
+  availability_zone = "us-east-1b"
 
   tags = {
     Name = "${var.challenge}-Subnet"
@@ -47,13 +47,6 @@ resource "aws_route_table_association" "main_route_table_assoc" {
 # Step 5: Create a security group to allow SSH access to the EC2 instance
 resource "aws_security_group" "main_sg" {
   vpc_id = aws_vpc.main_vpc.id
-
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
 
   egress {
     from_port   = 0
